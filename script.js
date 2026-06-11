@@ -36,3 +36,44 @@ for (const nom of pays) {
     console.log(`Pays africain : ${nom}`);
 }
 console.log(`Il y a ${pays.length} pays dans la liste.`);
+function fcfaVersEuro(montant) {
+    return montant / 656;
+}
+console.log(fcfaVersEuro(10000)); // environ 15.24
+function moyenne(notes) {
+    let somme = 0;
+    for (const note of notes) {
+        somme = somme + note;
+    }
+    return somme / notes.length;
+}
+const notesAminata = [12, 15, 9, 14];
+console.log(`Moyenne : ${moyenne(notesAminata)}`); // 12.5
+function estMajeur(age) {
+    return age >= 18;
+}
+console.log(estMajeur(20)); // true
+console.log(estMajeur(16)); // false
+function fizzBuzzSenegal() {
+    for (let n = 1; n <= 30; n++) {
+        if (n % 15 === 0) {
+            console.log("Thiéboudienne");
+        } else if (n % 3 === 0) {
+            console.log("Thié");
+        } else if (n % 5 === 0) {
+            console.log("Bou");
+        } else {
+            console.log(n);
+        }
+    }
+}
+fizzBuzzSenegal();
+function estPalindrome(mot) {
+    let inverse = "";
+    for (const lettre of mot) {
+        inverse = lettre + inverse; // on empile à l'envers
+    }
+    return mot === inverse;
+}
+console.log(estPalindrome("kayak")); // true
+console.log(estPalindrome("Dakar")); // false
