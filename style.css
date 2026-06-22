@@ -206,3 +206,7 @@ footer a {
 footer a:hover {
     color: white;
 }
+
+.cachee {
+    display: none;
+}
