@@ -77,3 +77,58 @@ function estPalindrome(mot) {
 }
 console.log(estPalindrome("kayak")); // true
 console.log(estPalindrome("Dakar")); // false
+console.table(Pays);
+console.log(choisirAuHasard(Pays));
+
+// Exercice 1: 1. Création du tableau de 10 étudiants (objets { nom, note })
+const etudiants = [
+    { nom: "Alice", note: 14 },
+    { nom: "Awa", note: 12 },
+    { nom: "Fatou", note: 16 },
+    { nom: "Daouda", note: 9 },
+    { nom: "Eva", note: 15 },
+    { nom: "Mouhamed", note: 11 },
+    { nom: "Sophie", note: 18 },
+    { nom: "Adama", note: 8 },
+    { nom: "Julie", note: 13 },
+    { nom: "Antoine", note: 10 }
+];
+
+// 2. Initialisation de la variable somme avec let (comme suggéré dans l'indice)
+let somme = 0;
+
+// 3. Utilisation de forEach pour accumuler les notes
+etudiants.forEach(e => {
+    somme += e.note;
+});
+
+// 4. Calcul de la moyenne en divisant par etudiants.length
+const Moyenne = somme / etudiants.length;
+
+// Affichage du résultat
+console.log(`La moyenne de la classe est de : ${Moyenne} / 20`);
+
+// Exercice 2: 1. Un tableau d'exemple avec des prix en FCFA
+const prixFCFA = [1312, 6560, 20000, 3280, 500];
+
+// 2. Utilisation de map pour créer le nouveau tableau des prix en euros
+const prixEuros = prixFCFA.map(prix => {
+    // On divise par 656 et on peut arrondir à 2 décimales pour faire propre
+    return Number((prix / 656).toFixed(2));
+});
+
+// Affichage des résultats pour vérifier
+console.log("Prix en FCFA :", prixFCFA);
+console.log("Prix en Euros :", prixEuros);
+
+//Exercice 3: 1. Utilisation de filter pour ne garder que les étudiants ayant une note >= 10
+const etudiantsAdmis = etudiants.filter(e => e.note >= 10);
+
+// 2. Affichage du résultat de manière lisible avec console.table
+console.table(etudiantsAdmis);
+
+// Exercice 4: Utilisation de map avec la fonction fléchée (comme indiqué dans l'indice)
+const nomsCapitales = Pays.map(p => p.capitale);
+
+// Affichage du résultat
+console.log(nomsCapitales);
